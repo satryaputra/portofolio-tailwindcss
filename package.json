@@ -5,7 +5,10 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "build": "tailwind build ./src/input.css -o ./public/styles.css",
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy"
   },
   "keywords": [],
   "author": "",
